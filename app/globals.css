@@ -41,3 +41,9 @@ body {
   color: #555;
   line-height: 1.6;
 }
+
+.page {
+  max-width: 700px;
+  margin: 120px auto;
+  line-height: 1.7;
+}
