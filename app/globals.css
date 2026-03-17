@@ -1,15 +1,20 @@
 /* ─────────────────────────────────────────
+   FONTS
+───────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ─────────────────────────────────────────
    VARIABLES
 ───────────────────────────────────────── */
 :root {
-  --bg: #0e0e0e;
+  --bg: #161616;
   --fg: #f0ede8;
   --fg-dim: #888882;
   --accent: #add8e6;
   --accent-warm: #c9b99a;
   --border: rgba(240, 237, 232, 0.12);
-  --font-serif: var(--font-serif, "Georgia", serif);
-  --font-sans: var(--font-sans, "Helvetica Neue", sans-serif);
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
 }
 
 /* ─────────────────────────────────────────
@@ -40,7 +45,6 @@ ul { list-style: none; }
   justify-content: space-between;
   padding: 1.5rem 3rem;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
 }
 .navbar-name {
   font-family: var(--font-sans);
@@ -70,35 +74,33 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 7rem 3rem 2.5rem;
+  padding: 5.5rem 3rem 2.5rem;
 }
 .hero {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 4rem;
-  align-items: end;
-  flex: 1;
-  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  padding-top: 2.5rem;
 }
-.hero-text { max-width: 680px; }
+.hero-text { max-width: 640px; }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
-  line-height: 1.25;
+  font-size: clamp(1.55rem, 2.8vw, 2.4rem);
+  line-height: 1.28;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  font-style: normal;
   letter-spacing: -0.01em;
 }
-.hero-sub {
-  font-size: clamp(0.9rem, 1.1vw, 1rem);
-  line-height: 1.7;
-  color: var(--fg-dim);
+.hero-title-sub {
+  display: block;
+  margin-top: 0.1em;
 }
 .hero-image-inner {
-  width: 220px;
-  height: 280px;
+  width: 280px;
+  height: 360px;
+  flex-shrink: 0;
   overflow: hidden;
-  border: 1px solid var(--border);
   filter: grayscale(100%);
   transition: filter 0.4s ease;
 }
@@ -109,11 +111,17 @@ ul { list-style: none; }
 /* ─────────────────────────────────────────
    ABOUT PAGE
 ───────────────────────────────────────── */
-.about-page { padding: 7rem 3rem 5rem; max-width: 900px; }
+.about-page {
+  padding: 7rem 3rem 5rem;
+  max-width: 900px;
+  background: #BCEDFF;
+  color: #161616;
+  min-height: 100vh;
+}
 .about-intro {
   padding-top: 2rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(22, 22, 22, 0.15);
   margin-bottom: 4rem;
 }
 .about-intro-text {
@@ -121,6 +129,7 @@ ul { list-style: none; }
   font-size: clamp(1.3rem, 2.2vw, 1.9rem);
   line-height: 1.4;
   max-width: 680px;
+  color: #161616;
 }
 .about-section { margin-bottom: 4.5rem; }
 .section-label {
@@ -128,7 +137,7 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--fg-dim);
+  color: rgba(22, 22, 22, 0.5);
   margin-bottom: 2rem;
 }
 
@@ -139,11 +148,11 @@ ul { list-style: none; }
   grid-template-columns: 200px 1fr;
   gap: 2rem;
   padding: 1.8rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(22, 22, 22, 0.15);
 }
 .timeline-year {
   font-size: 0.78rem;
-  color: var(--fg-dim);
+  color: rgba(22, 22, 22, 0.5);
   font-weight: 300;
   padding-top: 0.15rem;
   letter-spacing: 0.02em;
@@ -153,16 +162,17 @@ ul { list-style: none; }
   font-family: var(--font-serif);
   font-size: 1.05rem;
   margin-bottom: 0.2rem;
+  color: #161616;
 }
 .timeline-place {
   font-size: 0.82rem;
-  color: var(--accent-warm);
+  color: #4a7a8a;
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
 .timeline-desc {
   font-size: 0.85rem;
-  color: var(--fg-dim);
+  color: rgba(22, 22, 22, 0.6);
   line-height: 1.65;
 }
 
@@ -177,16 +187,16 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #2a6a8a;
   margin-bottom: 0.8rem;
 }
 .skill-list { display: flex; flex-direction: column; gap: 0.4rem; }
 .skill-list li {
   font-size: 0.88rem;
-  color: var(--fg-dim);
+  color: rgba(22, 22, 22, 0.6);
   transition: color 0.2s;
 }
-.skill-list li:hover { color: var(--fg); }
+.skill-list li:hover { color: #161616; }
 
 /* ─────────────────────────────────────────
    PROJECTS PAGE
