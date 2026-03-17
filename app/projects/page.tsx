@@ -15,7 +15,7 @@ const projects: Project[] = [
     number: "01",
     title: "Loan Approval Prediction Model",
     category: "Data & Tech",
-    tags: ["Python", "Machine Learning", "Streamlit", "GitHub"],
+    tags: ["Python", "Machine Learning", "Streamlit", "Team Project"],
     desc:
       "Analyzed a large financial dataset and developed a machine learning model to predict loan approval outcomes. Built an interactive Streamlit dashboard for live exploration of the model.",
     year: "2025",
@@ -55,25 +55,26 @@ const projects: Project[] = [
   },
   // ── Design & Branding ────────────────────────────────────────
   {
-    number: "04",
+    number: "01",
     title: "Planet Runner — Brand Guidelines",
     category: "Design & Branding",
-    tags: ["Branding", "UI/UX", "Figma", "KARD"],
+    tags: ["Branding", "UI/UX", "Figma"],
     desc:
       "Conceptualized and designed a social running application set in a cosmic narrative. Developed full brand identity including logo system, mascot (Urth), color palette, typography, and app UI.",
     year: "2025",
     links: [
       {
-        label: "Behance",
+        label: "Final Result",
         href: "https://www.behance.net/gallery/227328483/PLANET-RUNNER",
       },
+      { label: "Brand Guidelines", href: "https://www.behance.net/gallery/245946469/Planet-Runner-Brand-Guidelines" },
     ],
   },
   {
-    number: "05",
+    number: "02",
     title: "Voir — Exhibition Discovery App",
     category: "Design & Branding",
-    tags: ["UI/UX", "Figma", "App Design", "KARD"],
+    tags: ["UI/UX", "Figma", "App Design"],
     desc:
       "Individual project: conceptualized and designed an app for discovering exhibitions and performances, with a built-in journaling feature. Prototyped in Figma and published via Figma Make.",
     year: "2025",
@@ -86,10 +87,10 @@ const projects: Project[] = [
     ],
   },
   {
-    number: "06",
+    number: "03",
     title: "KARD × MMCA Poster",
     category: "Design & Branding",
-    tags: ["Poster Design", "Adobe", "KARD"],
+    tags: ["Poster Design", "Adobe Photoshop"],
     desc:
       "Designed a promotional poster for a KARD collaboration with the National Museum of Modern and Contemporary Art (MMCA).",
     year: "2025",
@@ -102,7 +103,7 @@ const projects: Project[] = [
   },
   // ── Video ────────────────────────────────────────────────────
   {
-    number: "07",
+    number: "01",
     title: "The Dark Side of K-POP",
     category: "Video",
     tags: ["Documentary", "Video Editing", "EALC 230"],
@@ -114,7 +115,7 @@ const projects: Project[] = [
     ],
   },
   {
-    number: "08",
+    number: "02",
     title: "Paper to Video — Generative AI & Design Fixation",
     category: "Video",
     tags: ["Video Essay", "Generative AI", "IS 492"],
@@ -129,7 +130,7 @@ const projects: Project[] = [
     ],
   },
   {
-    number: "09",
+    number: "03",
     title: "Taipei, Taiwan — Travel Vlog",
     category: "Video",
     tags: ["Vlog", "Video Editing", "Personal"],
