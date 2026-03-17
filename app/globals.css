@@ -86,8 +86,8 @@ ul { list-style: none; }
   grid-column: 1;
   grid-row: 1;
   font-family: var(--font-serif);
-  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
-  line-height: 1.3;
+  font-size: clamp(1.45rem, 3.2vw, 2.9rem);
+  line-height: 1.28;
   font-weight: 400;
   letter-spacing: -0.01em;
   align-self: start;
@@ -96,8 +96,8 @@ ul { list-style: none; }
 .hero-image-inner {
   grid-column: 2;
   grid-row: 1 / 3;
-  width: 320px;
-  height: 420px;
+  width: 240px;
+  height: 310px;
   flex-shrink: 0;
   overflow: hidden;
   filter: grayscale(100%);
@@ -160,7 +160,7 @@ ul { list-style: none; }
 }
 .timeline-title {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   margin-bottom: 0.2rem;
   color: #161616;
 }
@@ -456,6 +456,50 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
+/* Awards & Certificates */
+.awards-list { display: flex; flex-direction: column; }
+.award-item {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(22, 22, 22, 0.15);
+  align-items: baseline;
+}
+.award-year {
+  font-size: 0.78rem;
+  color: rgba(22, 22, 22, 0.5);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.award-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: #161616;
+}
+.award-issuer {
+  font-size: 0.78rem;
+  color: rgba(22, 22, 22, 0.5);
+  margin-top: 0.15rem;
+}
+.award-link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(22, 22, 22, 0.45);
+  border-bottom: 1px solid rgba(22, 22, 22, 0.25);
+  padding-bottom: 0.1rem;
+  transition: color 0.2s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+.award-link:hover { color: #161616; }
+.award-link svg { flex-shrink: 0; }
+
 /* ─────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────── */
@@ -464,31 +508,36 @@ ul { list-style: none; }
   .navbar-links { gap: 1.5rem; }
   .navbar-link { font-size: 0.82rem; }
 
-  /* Home — stack vertically on mobile for better readability */
+  /* Home — stack vertically on mobile */
   .home-page { padding: 4.5rem 1.25rem 2rem; }
   .hero {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 1.5rem 0;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 0 1rem;
+    align-items: start;
   }
   .hero-title {
     grid-column: 1;
     grid-row: 1;
-    font-size: clamp(1.25rem, 5.5vw, 1.6rem);
+    font-size: clamp(1.1rem, 4.8vw, 1.45rem);
     line-height: 1.4;
     padding-top: 1.5rem;
+    align-self: start;
   }
   .hero-image-inner {
-    grid-column: 1;
-    grid-row: 2;
-    width: 100%;
-    height: 52vw;
-    max-height: 280px;
-    align-self: auto;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 110px;
+    height: 145px;
+    align-self: end;
   }
 
   .about-page, .projects-page, .contact-page { padding: 6rem 1.5rem 3rem; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
+  .award-item { grid-template-columns: 1fr auto; grid-template-rows: auto auto; }
+  .award-year { grid-column: 1; grid-row: 2; margin-top: 0.2rem; }
+  .award-title { grid-column: 1; grid-row: 1; }
+  .award-link { grid-column: 2; grid-row: 1; align-self: start; }
   .project-item { grid-template-columns: 36px 1fr; gap: 0.75rem; }
   .contact-grid { grid-template-columns: 1fr; min-height: auto; }
   .contact-left {
