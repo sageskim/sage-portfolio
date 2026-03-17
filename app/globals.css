@@ -1,49 +1,42 @@
 body {
-  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  background: #fafafa;
+  background: #f6f4d8;
   color: #111;
+  margin: 0;
 }
 
-/* navbar */
+/* hero */
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 80px;
+.hero {
+  max-width: 900px;
+  margin: 200px auto;
 }
 
-.menu a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #111;
-  font-size: 14px;
+.hero h1 {
+  font-size: 80px;
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
-.menu a:hover {
-  opacity: 0.5;
-}
-
-/* home */
-
-.home {
+.hero p {
+  font-size: 22px;
+  line-height: 1.7;
   max-width: 700px;
-  margin: 150px auto;
-  text-align: center;
 }
 
-.home h1 {
-  font-size: 40px;
+/* second section */
+
+.mission {
+  max-width: 900px;
+  margin: 200px auto;
+}
+
+.mission h2 {
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
-.home p {
-  color: #555;
-  line-height: 1.6;
-}
-
-.page {
-  max-width: 700px;
-  margin: 120px auto;
-  line-height: 1.7;
+.mission p {
+  font-size: 20px;
+  line-height: 1.8;
 }
