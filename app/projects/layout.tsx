@@ -1,3 +1,3 @@
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {
-  return <div style={{ background: "#F97D67", minHeight: "100vh" }}>{children}</div>;
+  return <div style={{ background: "#FEF8C7", minHeight: "100vh" }}>{children}</div>;
 }
