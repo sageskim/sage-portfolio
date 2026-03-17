@@ -263,13 +263,13 @@ ul { list-style: none; }
 }
 .project-wip {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
-  border: 1px solid #1a1a1a;
-  color: #1a1a1a;
+  padding: 0.18rem 0.55rem;
+  border: 1px solid rgba(26, 26, 26, 0.3);
+  color: rgba(26, 26, 26, 0.45);
 }
 .project-year {
   font-size: 0.78rem;
@@ -308,6 +308,11 @@ ul { list-style: none; }
   border: 1px solid rgba(26, 26, 26, 0.4);
   color: #1a1a1a;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
+  font-family: var(--font-sans);
+}
+.project-link-btn::after {
+  content: " ↗";
+  font-style: normal;
 }
 .project-link-btn:hover {
   background: #1a1a1a;
@@ -326,7 +331,7 @@ ul { list-style: none; }
   justify-content: center;
   color: #e8e8f0;
 }
-.contact-intro { margin-bottom: 4rem; }
+.contact-intro { margin-bottom: 3rem; }
 .contact-heading {
   font-family: var(--font-serif);
   font-size: clamp(3rem, 7vw, 7rem);
@@ -342,21 +347,24 @@ ul { list-style: none; }
   line-height: 1.6;
   max-width: 380px;
 }
-.contact-links { display: flex; flex-direction: column; max-width: 600px; }
-.contact-link-item {
+
+/* Email — prominent block */
+.contact-email-block {
   display: flex;
   align-items: center;
-  padding: 1.4rem 0;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid rgba(232, 232, 240, 0.15);
   border-bottom: 1px solid rgba(232, 232, 240, 0.15);
-  gap: 1rem;
+  margin-bottom: 0.5rem;
   transition: opacity 0.2s;
 }
-.contact-link-item:hover { opacity: 0.7; }
-.contact-link-item:hover .contact-link-arrow {
+.contact-email-block:hover { opacity: 0.75; }
+.contact-email-block:hover .contact-email-arrow {
   transform: translate(3px, -3px);
   color: #BCEDFF;
 }
-.contact-link-label {
+.contact-email-label {
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -365,15 +373,44 @@ ul { list-style: none; }
   width: 90px;
   flex-shrink: 0;
 }
-.contact-link-value {
+.contact-email-value {
   font-family: var(--font-serif);
-  font-size: 1rem;
-  flex: 1;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
   color: #e8e8f0;
+  flex: 1;
+}
+.contact-email-arrow {
+  font-size: 1.1rem;
+  color: rgba(232, 232, 240, 0.5);
+  transition: transform 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+/* Social links — label only */
+.contact-links { display: flex; flex-direction: column; max-width: 600px; }
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(232, 232, 240, 0.1);
+  transition: opacity 0.2s;
+}
+.contact-link-item:hover { opacity: 0.6; }
+.contact-link-item:hover .contact-link-arrow {
+  transform: translate(3px, -3px);
+  color: #BCEDFF;
+}
+.contact-link-label {
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(232, 232, 240, 0.55);
 }
 .contact-link-arrow {
-  font-size: 1rem;
-  color: rgba(232, 232, 240, 0.45);
+  font-size: 0.9rem;
+  color: rgba(232, 232, 240, 0.35);
   transition: transform 0.2s, color 0.2s;
   flex-shrink: 0;
 }
@@ -384,11 +421,29 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .navbar { padding: 1.2rem 1.5rem; }
   .navbar-links { gap: 1.5rem; }
-  .home-page { padding: 6rem 1.5rem 2rem; }
-  .hero { grid-template-columns: 1fr; gap: 2.5rem; }
-  .hero-image-inner { width: 160px; height: 200px; }
+  .navbar-link { font-size: 0.82rem; }
+
+  /* Home — keep side-by-side but smaller */
+  .home-page { padding: 5rem 1.25rem 2rem; }
+  .hero {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 0 1.25rem;
+    align-items: start;
+  }
+  .hero-title {
+    font-size: clamp(1rem, 4.2vw, 1.3rem);
+    line-height: 1.35;
+    padding-top: 1.5rem;
+  }
+  .hero-image-inner {
+    width: 120px;
+    height: 155px;
+    align-self: end;
+  }
+
   .about-page, .projects-page, .contact-page { padding: 6rem 1.5rem 3rem; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
-  .project-item { grid-template-columns: 40px 1fr; gap: 1rem; }
-  .contact-heading { font-size: clamp(2.8rem, 14vw, 5rem); }
+  .project-item { grid-template-columns: 36px 1fr; gap: 0.75rem; }
+  .contact-heading { font-size: clamp(2.4rem, 12vw, 4rem); }
 }
