@@ -3,7 +3,7 @@ export default function About() {
     {
       year: "Aug 2025 — Present",
       title: "ATLAS — STAT Team Member",
-      place: "Association of The Liberal Arts and Sciences",
+      place: "Association of The Liberal Arts and Sciencesm, UIUC",
       desc: "Collaborating on data analysis projects using Python and GitHub. Developed a loan approval prediction model; building an interactive Streamlit dashboard. Preparing for datathon competitions.",
     },
     {
@@ -21,17 +21,17 @@ export default function About() {
     {
       year: "Aug 2024 — Dec 2024",
       title: "Research Assistant",
-      place: "University of Illinois Urbana-Champaign",
+      place: "University of Wisconsin, Milwaukee",
       desc: "Assisted research on how nationality influences movie genre preferences. Conducted literature reviews, organized datasets, and performed qualitative analysis to identify patterns.",
     },
     {
       year: "Jan 2024 — May 2024",
       title: "Course Note Taker — Volunteer",
-      place: "University of Illinois Urbana-Champaign",
+      place: "University of Wisconsin, Milwaukee",
       desc: "Provided structured digital notes for students with hearing disabilities in Introduction to Information Science & Technology.",
     },
     {
-      year: "Expected Dec 2025",
+      year: "Expected Dec 2026",
       title: "B.S. Information Science + Data Science",
       place: "University of Illinois Urbana-Champaign",
       desc: "GPA 4.0 / 4.0 · Dean's List all semesters. Coursework includes Linear Algebra for Data Science, Data Science Exploration, Algorithms & Data Structures, UX Design, Research Design, and Generative AI for Human-AI Collaboration.",
