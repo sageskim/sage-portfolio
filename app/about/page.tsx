@@ -8,7 +8,7 @@ const timeline = [
   {
     year: "Aug 2025 — Present",
     title: "ATLAS — STAT Team Member",
-    place: "Association of The Liberal Arts and Sciences",
+    place: "Association of The Liberal Arts and Sciences,UIUC",
     desc: "Collaborating on data analysis projects using Python and GitHub. Developed a loan approval prediction model; building an interactive Streamlit dashboard. Preparing for datathon competitions.",
   },
   {
@@ -20,19 +20,19 @@ const timeline = [
   {
     year: "Jan 2026 — Present",
     title: "GLOBE — Member",
-    place: "Global Leaders Orange and Blue Engagement",
+    place: "Global Leaders Orange and Blue Engagement, UIUC",
     desc: "Engaged in intercultural discussions with students from diverse backgrounds. Developing global awareness and cross-cultural communication skills.",
   },
   {
     year: "Aug 2024 — Dec 2024",
     title: "Research Assistant",
-    place: "University of Illinois Urbana-Champaign",
+    place: "University of Wisconsin",
     desc: "Assisted research on how nationality influences movie genre preferences. Conducted literature reviews, organized datasets, and performed qualitative analysis.",
   },
   {
     year: "Jan 2024 — May 2024",
     title: "Course Note Taker — Volunteer",
-    place: "University of Illinois Urbana-Champaign",
+    place: "University of Wisconsin",
     desc: "Provided structured digital notes for students with hearing disabilities in Introduction to Information Science & Technology.",
   },
   {
@@ -45,7 +45,7 @@ const timeline = [
     year: "Feb 2023",
     title: "Gyeonggi Academy of Foreign Languages",
     place: "Graduated",
-    desc: "",
+    desc: "Statistics Club, Student Council, Business and Economics Club, Interdisciplinary Fashion Club, Art and Design Club, Statistics Mentoring.",
   },
 ];
 
@@ -83,7 +83,7 @@ const awards = [
 ];
 
 const skills = [
-  { category: "Data & Code", items: ["Python", "NumPy", "Pandas", "R", "SQL", "GitHub", "Streamlit", "Excel"] },
+  { category: "Data & Code", items: ["Python", "NumPy", "Pandas", "ML", "SQL", "GitHub", "Streamlit", "Excel"] },
   { category: "Web", items: ["JavaScript", "TypeScript", "React", "Next.js", "HTML / CSS"] },
   { category: "Design & Media", items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Video Editing"] },
   { category: "Languages", items: ["Korean — Native", "English — Fluent"] },
