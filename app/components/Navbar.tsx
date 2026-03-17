@@ -10,7 +10,7 @@ const navLinks = [
 
 const pageBg: Record<string, { bg: string; fg: string }> = {
   "/about":   { bg: "#BCEDFF", fg: "#161616" },
-  "/projects":{ bg: "#F97D67", fg: "#1a1a1a" },
+  "/projects":{ bg: "#FEF8C7", fg: "#1a1a1a" },
   "/contact": { bg: "#292B4F", fg: "#e8e8f0" },
 };
 
