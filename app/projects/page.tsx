@@ -64,10 +64,9 @@ const projects: Project[] = [
     year: "2025",
     links: [
       {
-        label: "Final Result",
+        label: "Behance",
         href: "https://www.behance.net/gallery/227328483/PLANET-RUNNER",
       },
-      { label: "Brand Guidelines", href: "https://www.behance.net/gallery/245946469/Planet-Runner-Brand-Guidelines" },
     ],
   },
   {
@@ -135,7 +134,7 @@ const projects: Project[] = [
     category: "Video",
     tags: ["Vlog", "Video Editing", "Personal"],
     desc: "A personal travel vlog documenting a trip to Taipei, Taiwan with friends.",
-    year: "2025",
+    year: "2026",
     links: [
       {
         label: "YouTube",
@@ -192,7 +191,7 @@ export default function Projects() {
                               rel="noopener noreferrer"
                               className="project-link-btn"
                             >
-                              {l.label} ↗
+                              {l.label}
                             </a>
                           ))}
                         </div>
