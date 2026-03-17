@@ -40,3 +40,15 @@ body {
   font-size: 20px;
   line-height: 1.8;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+
+.links a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #111;
+}
