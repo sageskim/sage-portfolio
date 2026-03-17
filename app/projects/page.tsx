@@ -53,7 +53,7 @@ const projects: Project[] = [
     desc: "Conceptualized and designed a social running application set in a cosmic narrative. Developed full brand identity including logo system, mascot (Urth), color palette, typography, and app UI.",
     year: "2025",
     links: [
-      { label: "Brand Guidelines", href: "https://www.behance.net/gallery/245946469/Planet-Runner-Brand-Guidelines" }
+      { label: "Brand Guidelines", href: "https://www.behance.net/gallery/245946469/Planet-Runner-Brand-Guidelines" },
       { label: "Final Result", href: "https://www.behance.net/gallery/227328483/PLANET-RUNNER" },
     ],
   },
