@@ -15,7 +15,7 @@ export default function About() {
     {
       year: "Jan 2026 — Present",
       title: "GLOBE — Member",
-      place: "Global Leaders Orange and Blue Engagement",
+      place: "Global Leaders Orange and Blue Engagement, UIUC",
       desc: "Engaged in intercultural discussions with students from diverse backgrounds. Developing global awareness and cross-cultural communication skills.",
     },
     {
