@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Serif, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import ScrollEffects from "./components/ScrollEffects";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-serif",
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${instrumentSerif.variable} ${dmSans.variable}`}>
         <Navbar />
+        <ScrollEffects />
         {children}
       </body>
     </html>
