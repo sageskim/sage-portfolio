@@ -53,8 +53,7 @@ const projects: Project[] = [
     desc: "Conceptualized and designed a social running application set in a cosmic narrative. Developed full brand identity including logo system, mascot (Urth), color palette, typography, and app UI.",
     year: "2025",
     links: [
-      { label: "Brand Guidelines", href: "https://www.behance.net/gallery/245946469/Planet-Runner-Brand-Guidelines" },
-      { label: "Final Result", href: "https://www.behance.net/gallery/227328483/PLANET-RUNNER" },
+      { label: "Behance", href: "https://www.behance.net/gallery/227328483/PLANET-RUNNER" },
     ],
   },
   {
@@ -73,7 +72,7 @@ const projects: Project[] = [
     number: "06",
     title: "KARD \u00d7 MMCA Poster",
     category: "Marketing & Design",
-    tags: ["Poster Design", "Adobe Photoshop"],
+    tags: ["Poster Design", "Adobe"],
     desc: "Designed a promotional poster for a collaboration with the National Museum of Modern and Contemporary Art (MMCA).",
     year: "2025",
     links: [
@@ -101,17 +100,6 @@ const projects: Project[] = [
     year: "2026",
     links: [
       { label: "YouTube", href: "https://youtu.be/WiMfOvQOLog?si=uoGy7Ic8i_82XbXO" },
-    ],
-  },
-  {
-    number: "09",
-    title: "Taipei, Taiwan \u2014 Travel Vlog",
-    category: "Media Works",
-    tags: ["Vlog", "Video Editing"],
-    desc: "A personal travel vlog documenting a trip to Taipei, Taiwan with friends.",
-    year: "2025",
-    links: [
-      { label: "YouTube", href: "https://youtu.be/OzrrfwxaWPQ?si=EESglyaWMxiRE9Bc" },
     ],
   },
 ];
