@@ -1,43 +1,66 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
+  { href: "#about",    label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact",  label: "Contact" },
 ];
 
-const pageBg: Record<string, { bg: string; fg: string }> = {
-  "/about":   { bg: "#BCEDFF", fg: "#161616" },
-  "/projects":{ bg: "#FEF8C7", fg: "#1a1a1a" },
-  "/contact": { bg: "#292B4F", fg: "#e8e8f0" },
-};
-
 export default function Navbar() {
-  const pathname = usePathname();
-  const theme = pageBg[pathname] ?? { bg: "#161616", fg: "#f0ede8" };
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const sections = ["about", "projects", "contact"];
+    const observers: IntersectionObserver[] = [];
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActive(id); },
+        { threshold: 0.3 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <nav
-      className="navbar"
-      style={{ background: theme.bg, color: theme.fg }}
-    >
-      <Link href="/" className="navbar-name" style={{ color: theme.fg }}>
+    <nav className="navbar">
+      <a href="#" className="navbar-name" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
         Seyeon Kim
-      </Link>
+      </a>
       <ul className="navbar-links">
         {navLinks.map((link) => (
           <li key={link.href}>
-            <Link
+            <a
               href={link.href}
-              className={`navbar-link ${pathname === link.href ? "active" : ""}`}
-              style={{ color: theme.fg }}
+              className={`navbar-link ${active === link.href.replace("#", "") ? "active" : ""}`}
+              onClick={(e) => scrollTo(e, link.href)}
             >
               {link.label}
-            </Link>
+            </a>
           </li>
         ))}
+        <li>
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar-cv"
+          >
+            CV
+          </a>
+        </li>
       </ul>
     </nav>
   );
