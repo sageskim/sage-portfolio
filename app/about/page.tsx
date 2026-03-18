@@ -8,7 +8,7 @@ const timeline = [
   {
     year: "Aug 2025 — Present",
     title: "ATLAS — STAT Team Member",
-    place: "Association of The Liberal Arts and Sciences,UIUC",
+    place: "Association of The Liberal Arts and Sciences",
     desc: "Collaborating on data analysis projects using Python and GitHub. Developed a loan approval prediction model; building an interactive Streamlit dashboard. Preparing for datathon competitions.",
   },
   {
@@ -20,19 +20,19 @@ const timeline = [
   {
     year: "Jan 2026 — Present",
     title: "GLOBE — Member",
-    place: "Global Leaders Orange and Blue Engagement, UIUC",
+    place: "Global Leaders Orange and Blue Engagement",
     desc: "Engaged in intercultural discussions with students from diverse backgrounds. Developing global awareness and cross-cultural communication skills.",
   },
   {
     year: "Aug 2024 — Dec 2024",
     title: "Research Assistant",
-    place: "University of Wisconsin",
+    place: "University of Illinois Urbana-Champaign",
     desc: "Assisted research on how nationality influences movie genre preferences. Conducted literature reviews, organized datasets, and performed qualitative analysis.",
   },
   {
     year: "Jan 2024 — May 2024",
     title: "Course Note Taker — Volunteer",
-    place: "University of Wisconsin",
+    place: "University of Illinois Urbana-Champaign",
     desc: "Provided structured digital notes for students with hearing disabilities in Introduction to Information Science & Technology.",
   },
   {
@@ -45,7 +45,7 @@ const timeline = [
     year: "Feb 2023",
     title: "Gyeonggi Academy of Foreign Languages",
     place: "Graduated",
-    desc: "Statistics Club, Student Council, Business and Economics Club, Interdisciplinary Fashion Club, Art and Design Club, Statistics Mentoring.",
+    desc: "",
   },
 ];
 
@@ -83,7 +83,7 @@ const awards = [
 ];
 
 const skills = [
-  { category: "Data & Code", items: ["Python", "NumPy", "Pandas", "ML", "SQL", "GitHub", "Streamlit", "Excel"] },
+  { category: "Data & Code", items: ["Python", "NumPy", "Pandas", "R", "SQL", "GitHub", "Streamlit", "Excel"] },
   { category: "Web", items: ["JavaScript", "TypeScript", "React", "Next.js", "HTML / CSS"] },
   { category: "Design & Media", items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Video Editing"] },
   { category: "Languages", items: ["Korean — Native", "English — Fluent"] },
@@ -104,12 +104,12 @@ export default function About() {
         <div className="timeline">
           {timeline.map((item, i) => (
             <div className="timeline-item" key={i}>
-              <span className="timeline-year">{item.year}</span>
               <div className="timeline-body">
                 <p className="timeline-title">{item.title}</p>
                 <p className="timeline-place">{item.place}</p>
                 {item.desc && <p className="timeline-desc">{item.desc}</p>}
               </div>
+              <span className="timeline-year">{item.year}</span>
             </div>
           ))}
         </div>
@@ -151,6 +151,12 @@ export default function About() {
             </div>
           ))}
         </div>
+      </section>
+      <section className="about-section">
+        <h2 className="section-label">Interests</h2>
+        <p className="about-interests">
+          Photography, visiting exhibitions and galleries, filming and editing.
+        </p>
       </section>
     </main>
   );
