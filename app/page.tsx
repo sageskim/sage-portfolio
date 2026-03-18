@@ -74,14 +74,14 @@ export default function Home() {
 
       {/* ── ABOUT ── */}
       <section className="about-page" id="about">
-        <div className="about-intro">
+        <div className="about-intro fade-section">
           <p className="about-intro-text">
             I explore the intersection of data, creativity, and culture — turning
             complex information into clear, meaningful insights. Based between Illinois and Seoul.
           </p>
         </div>
 
-        <div className="about-section">
+        <div className="about-section fade-section">
           <h2 className="section-label">Experience & Education</h2>
           <div className="timeline">
             {timeline.map((item, i) => (
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="about-section">
+        <div className="about-section fade-section">
           <h2 className="section-label">Awards & Certificates</h2>
           <div className="awards-list">
             {awards.map((item, i) => (
@@ -117,7 +117,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="about-section">
+        <div className="about-section fade-section">
           <h2 className="section-label">Skills</h2>
           <div className="skills-grid">
             {skills.map((group, i) => (
@@ -134,14 +134,14 @@ export default function Home() {
 
       {/* ── PROJECTS ── */}
       <section className="projects-page" id="projects">
-        <div className="projects-header">
+        <div className="projects-header fade-section">
           <p className="projects-header-text">
             Selected work across data science and coding,
             marketing and design, and media works.
           </p>
         </div>
         {categories.map((cat) => (
-          <div key={cat} className="projects-category-block">
+          <div key={cat} className="projects-category-block fade-section">
             <h2 className="projects-cat-label">{cat}</h2>
             <div className="projects-list">
               {projects.filter((p) => p.category === cat).map((p, i) => (
