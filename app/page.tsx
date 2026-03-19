@@ -13,7 +13,7 @@ const timeline = [
   { year: "Aug 2024 — Dec 2024", title: "Research Assistant", place: "University of Illinois Urbana-Champaign", desc: "Assisted research on how nationality influences movie genre preferences. Conducted literature reviews, organized datasets, and performed qualitative analysis." },
   { year: "Jan 2024 — May 2024", title: "Course Note Taker — Volunteer", place: "University of Illinois Urbana-Champaign", desc: "Provided structured digital notes for students with hearing disabilities in Introduction to Information Science & Technology." },
   { year: "Expected Dec 2025", title: "B.S. Information Science + Data Science", place: "University of Illinois Urbana-Champaign", desc: "GPA 4.0 / 4.0 · Dean's List all semesters. Coursework: Linear Algebra for Data Science, Data Science Exploration, Algorithms & Data Structures, UX Design, Research Design, Generative AI for Human-AI Collaboration." },
-  { year: "Feb 2023", title: "Gyeonggi Academy of Foreign Languages", place: "Graduated", desc: "" },
+  { year: "Feb 2023", title: "Gyeonggi Academy of Foreign Languages", place: "Graduated", desc: "Statistics Club, Student Council, Business and Economics Club, Interdisciplinary Fashion Club, Statistics Mentoring." },
 ];
 
 const awards = [
