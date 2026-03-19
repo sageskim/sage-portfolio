@@ -281,7 +281,7 @@ ul { list-style: none; }
   color: #161616;
   border-top: none;
 }
-.projects-header { padding-top: 2rem; padding-bottom: 2rem; }
+.projects-header { padding-top: 2rem; padding-bottom: 3rem; }
 .projects-header-text {
   font-family: var(--font-serif);
   font-size: clamp(1.7rem, 3vw, 2.6rem);
@@ -493,7 +493,7 @@ ul { list-style: none; }
   .home-page { padding: 4.5rem 1.25rem 2rem; }
   .hero { grid-template-columns: 1fr auto; gap: 0 1rem; }
   .hero-title { font-size: clamp(1.1rem, 4.8vw, 1.45rem); line-height: 1.4; padding-top: 1.5rem; }
-  .hero-image-inner { width: 110px; height: 145px; }
+  .hero-image-inner { width: 130px; height: 170px; }
 
   .about-page, .projects-page { padding: 4rem 1.5rem 4rem; }
   .timeline-item { grid-template-columns: 1fr; }
