@@ -54,25 +54,23 @@ ul { list-style: none; }
   color: var(--fg);
   transition: color 0.2s;
 }
-.navbar-name:hover { color: var(--accent); }
+.navbar-name:hover { color: #FF8E65 !important; }
 .navbar-links { display: flex; align-items: center; gap: 2.5rem; }
 .navbar-link {
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 0.04em;
-  color: var(--fg-dim);
   transition: color 0.2s;
 }
-.navbar-link:hover, .navbar-link.active { color: var(--accent); }
-.navbar-link.active { font-weight: 500; color: var(--fg); }
+.navbar-link:hover { color: #FF8E65 !important; }
+.navbar-link.active { font-weight: 600; }
 .navbar-cv {
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 0.04em;
-  color: var(--fg-dim);
   transition: color 0.2s;
 }
-.navbar-cv:hover { color: var(--accent); }
+.navbar-cv:hover { color: #FF8E65 !important; }
 
 /* Light bg navbar override */
 .navbar.light .navbar-name,
