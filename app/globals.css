@@ -63,7 +63,7 @@ ul { list-style: none; }
   transition: color 0.2s;
 }
 .navbar-link:hover { color: #FF8E65 !important; }
-.navbar-link.active { font-weight: 600; }
+.navbar-link.active { font-weight: 400; }
 .navbar-cv {
   font-size: 0.9rem;
   font-weight: 300;
