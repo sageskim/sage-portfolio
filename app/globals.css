@@ -74,6 +74,24 @@ ul { list-style: none; }
 }
 .navbar-cv:hover { color: var(--accent); }
 
+/* Light bg navbar override */
+.navbar.light .navbar-name,
+.navbar.light .navbar-link,
+.navbar.light .navbar-cv { color: rgba(22,22,22,0.5); }
+.navbar.light .navbar-link.active { color: #161616; font-weight: 500; }
+.navbar.light .navbar-link:hover,
+.navbar.light .navbar-cv:hover,
+.navbar.light .navbar-name:hover { color: var(--accent); }
+
+/* Navbar light mode (about/projects) */
+.navbar.light .navbar-name,
+.navbar.light .navbar-link,
+.navbar.light .navbar-cv { color: rgba(22,22,22,0.5); }
+.navbar.light .navbar-name:hover,
+.navbar.light .navbar-link:hover,
+.navbar.light .navbar-cv:hover { color: var(--accent); }
+.navbar.light .navbar-link.active { color: #161616; font-weight: 500; }
+
 /* ─────────────────────────────────────────
    HOME SECTION
 ───────────────────────────────────────── */
@@ -139,7 +157,7 @@ ul { list-style: none; }
 }
 .about-section { margin-bottom: 5rem; }
 .section-label {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -167,7 +185,7 @@ ul { list-style: none; }
 }
 .timeline-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
   margin-bottom: 0.25rem;
   color: #161616;
   line-height: 1.2;
@@ -228,7 +246,7 @@ ul { list-style: none; }
 }
 .award-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
   color: #161616;
   transition: color 0.2s;
 }
@@ -273,7 +291,7 @@ ul { list-style: none; }
 }
 .projects-category-block { margin-bottom: 4rem; }
 .projects-cat-label {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -453,11 +471,12 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--border);
-  font-size: 0.88rem;
-  font-weight: 300;
-  color: var(--fg-dim);
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 400;
+  color: var(--fg);
   transition: color 0.2s;
 }
 .contact-social-link:first-child { border-top: 1px solid var(--border); }
