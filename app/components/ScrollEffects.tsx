@@ -8,31 +8,33 @@ export default function ScrollEffects() {
     const fadeObs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
+          if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
       { threshold: 0.08 }
     );
     fadeSections.forEach((el) => fadeObs.observe(el));
 
-    // ── Navbar bg per section ─────────────────────────
-    const sectionBg: Record<string, { bg: string; fg: string }> = {
-      home:     { bg: "#161616", fg: "#DADADA" },
-      about:    { bg: "#E4E4E4", fg: "#161616" },
-      projects: { bg: "#FFFFFF", fg: "#161616" },
-      contact:  { bg: "#161616", fg: "#DADADA" },
+    // ── Navbar bg + text per section ──────────────────
+    const sectionTheme: Record<string, { bg: string; nameColor: string; linkColor: string; activeLinkColor: string }> = {
+      home:     { bg: "#161616", nameColor: "#DADADA", linkColor: "rgba(218,218,218,0.45)", activeLinkColor: "#DADADA" },
+      about:    { bg: "#E4E4E4", nameColor: "#161616", linkColor: "rgba(22,22,22,0.55)",   activeLinkColor: "#161616" },
+      projects: { bg: "#FFFFFF", nameColor: "#161616", linkColor: "rgba(22,22,22,0.55)",   activeLinkColor: "#161616" },
+      contact:  { bg: "#161616", nameColor: "#DADADA", linkColor: "rgba(218,218,218,0.45)", activeLinkColor: "#DADADA" },
     };
+
     const navbar = document.querySelector(".navbar") as HTMLElement | null;
 
     const applyTheme = (id: string) => {
-      const theme = sectionBg[id];
-      if (!navbar || !theme) return;
-      navbar.style.background = theme.bg;
-      navbar.style.color = theme.fg;
-      navbar.querySelectorAll("a").forEach((a) => {
-        (a as HTMLElement).style.setProperty("--nav-fg", theme.fg);
+      const t = sectionTheme[id];
+      if (!navbar || !t) return;
+      navbar.style.background = t.bg;
+      navbar.style.transition = "background 0.5s ease";
+      const name = navbar.querySelector(".navbar-name") as HTMLElement | null;
+      if (name) name.style.color = t.nameColor;
+      navbar.querySelectorAll(".navbar-link, .navbar-cv").forEach((a) => {
+        const el = a as HTMLElement;
+        el.style.color = el.classList.contains("active") ? t.activeLinkColor : t.linkColor;
       });
     };
 
@@ -43,7 +45,7 @@ export default function ScrollEffects() {
           if (entry.isIntersecting) applyTheme(entry.target.id);
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.25 }
     );
     sections.forEach((id) => {
       const el = document.getElementById(id);
