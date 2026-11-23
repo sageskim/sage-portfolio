@@ -66,7 +66,8 @@ export default function Home() {
             based between Illinois, USA and Seoul, South Korea.
           </p>
           <div className="hero-image-inner">
-            <img src="/profile.jpg" alt="Seyeon Sage Kim" className="hero-img" />
+            <img src="/profile-bw.jpg" alt="Seyeon Sage Kim" className="hero-img hero-img-bw" />
+            <img src="/profile-color.jpg" alt="" aria-hidden="true" className="hero-img hero-img-color" />
           </div>
         </div>
         <footer className="home-footer"><span>© 2026</span></footer>
