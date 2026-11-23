@@ -6,18 +6,17 @@ const ArrowSvg = () => (
 );
 
 // ── DATA ────────────────────────────────────────────────
-const timeline = [
-  { year: "Aug 2026 — Present", title: "Encoding Culture(s) Lab — Undergraduate Researcher", place: "School of Information Sciences, UIUC", desc: "Under the supervision of Professor Nicola Carboni, built a dataset of 120,000+ exhibition records from museums across the U.S. through bulk downloads and API calls. Cleaned and standardized multi-source data in OpenRefine and reconciled artist records against Wikidata and ULAN. Built an artist co-exhibition network, now analyzing it in Python to examine centrality, canon formation, and representation over time." },
+const timeline: { year: string; title: string; place: string; desc?: string; link?: { label: string; href: string } }[] = [
+  { year: "Aug 2026 — Present", title: "Encoding Culture(s) Lab — Undergraduate Researcher", place: "School of Information Sciences, UIUC", link: { label: "Lab website", href: "https://eclab.ischool.illinois.edu" }, desc: "Under the supervision of Professor Nicola Carboni, built a dataset of 120,000+ exhibition records from museums across the U.S. through bulk downloads and API calls. Cleaned and standardized multi-source data in OpenRefine and reconciled artist records against Wikidata and ULAN. Built an artist co-exhibition network, now analyzing it in Python to examine centrality, canon formation, and representation over time." },
   { year: "Aug 2025 — May 2026", title: "ATLAS — STAT Team Member", place: "Association of The Liberal Arts and Sciences, UIUC", desc: "Member of the STAT team, collaborating on data analysis projects using Python and GitHub. Built a loan approval prediction model using credit card data and an interactive Streamlit dashboard to present the results. Also competed in the Illinois Statistics Datathon with Synchrony, applying Python to real-world business data analysis." },
-  { year: "Jan 2026 — May 2026", title: "GLOBE — Member", place: "Global Leaders Orange and Blue Engagement, UIUC", desc: "Engaged in intercultural discussions with students from diverse backgrounds. Developing global awareness and cross-cultural communication skills." },
   { year: "Jan 2025 — Jan 2026", title: "KARD — Design Team Lead", place: "Korean Art Architecture Design Association, UIUC", desc: "Led the design team, managing project timelines and deliverables and leading branding for a social running app (Planet Runner). As a club executive, handled fundraising, event planning, and semester scheduling, including organizing a museum visit." },
+  { year: "Jan 2026 — May 2026", title: "GLOBE — Member", place: "Global Leaders Orange and Blue Engagement, UIUC", desc: "Engaged in intercultural discussions with students from diverse backgrounds. Developing global awareness and cross-cultural communication skills." },
   { year: "Expected Dec 2026", title: "University of Illinois Urbana-Champaign", place: "B.S. Information Science + Data Science", desc: "GPA 4.0 / 4.0 · Dean's List all semesters. Coursework: Data Science Discovery & Exploration, Introduction to Database Concepts and Applications, Data Management, Curation & Reproducibility, Data Storytelling, Consulting for Information Professionals, Principles of Marketing, Microeconomic Principles." },
   { year: "Feb 2023", title: "Gyeonggi Academy of Foreign Languages", place: "Graduated", desc: "Statistics Club, Student Council, Business and Economics Club, Interdisciplinary Fashion Club, Statistics Mentoring." },
 ];
 
 const awards = [
   { year: "All semesters", title: "Dean's List", issuer: "University of Illinois Urbana-Champaign", link: null },
-  { year: "Jul 2026", title: "TOEIC — 955 / 990", issuer: "ETS", link: null },
   { year: "Jul 2026", title: "Computer Specialist in Spreadsheet & Database — Level 2", issuer: "Korea Chamber of Commerce and Industry", link: null },
   { year: "Dec 2025", title: "Google Analytics Certification", issuer: "Google", link: "https://skillshop.credential.net/494990e7-bd92-43e4-b767-1a14d444f2f9#acc.xAlnVQwy" },
   { year: "Dec 2025", title: "Core IRB Training", issuer: "CITI Program", link: "https://www.citiprogram.org/verify/?w83de1068-9cd1-4607-a1e1-2dcab947a42f-74027029" },
@@ -27,22 +26,21 @@ const awards = [
 
 const skills = [
   { category: "Data & Code", items: ["Python", "Pandas", "NumPy", "ML", "SQL", "Data Analysis", "Tableau", "Excel", "OpenRefine", "NetworkX", "Streamlit", "GitHub"] },
-  { category: "Web", items: ["JavaScript", "TypeScript", "React", "Next.js", "HTML / CSS"] },
   { category: "Design & Media", items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Video Editing"] },
-  { category: "Languages", items: ["Korean — Native", "English — Fluent"] },
+  { category: "Languages", items: ["Korean — Native", "English — Fluent", "Japanese — Beginner"] },
 ];
 
 type Project = { number: string; title: string; category: string; tags: string[]; desc: string; year: string; links: { label: string; href: string }[]; wip?: boolean; };
 const projects: Project[] = [
-  { number: "01", title: "Loan Approval Prediction Model", category: "Data & Coding", tags: ["Python", "Machine Learning", "Streamlit"], desc: "Analyzed a large credit card dataset and built a machine learning model using Python (scikit-learn, Pandas) to predict loan approval outcomes, with an interactive Streamlit dashboard for exploring EDA and model outputs.", year: "2025", links: [{ label: "GitHub", href: "https://github.com/backjhello/LoanApproval" }, { label: "Live Demo", href: "https://loanapprovalgit-emrznk8e4p9x34cldjxm8b.streamlit.app" }] },
-  { number: "02", title: "Sentinel — Deepfake Detection", category: "Data & Coding", tags: ["AI", "Generative AI", "Python"], desc: "Team project researching and building tools to detect AI-generated deepfake content. Explores the intersection of generative AI, misinformation, and trust in digital media.", year: "2026", links: [{ label: "GitHub", href: "https://github.com/IS492-SP26/team-project-deepfakes" }] },
-  { number: "03", title: "Sephora Skincare Review Analysis", category: "Data & Coding", tags: ["Topic Modeling", "Machine Learning", "Tableau"], desc: "Merged Kaggle's Sephora product and review datasets to explore why skincare reviews are so polarized. Applied topic modeling to surface recurring complaints such as breakouts, built a model predicting whether reviewers recommend a product, and designed a Tableau dashboard comparing ratings, recommendation rates, and complaint themes across brands, categories, and skin types.", year: "2026", links: [] },
-  { number: "04", title: "MoMA Data Project", category: "Data & Coding", tags: ["Data Analysis", "Cultural Analytics", "Python"], desc: "An ongoing data exploration of the Museum of Modern Art's collection — investigating patterns in acquisition, nationality, and representation across art history.", year: "2026", links: [], wip: true },
+  { number: "01", title: "Constellations of the Canon — Artist Co-exhibition Network", category: "Data & Coding", tags: ["Network Analysis", "Cultural Analytics", "Python"], desc: "Built an artist co-exhibition network from 120,000+ U.S. museum exhibition records, reconciled against Wikidata and ULAN, to examine who sits at the center of the canon, how that shifts over time, and who is represented. Part of my research at the Encoding Culture(s) Lab.", year: "2026", links: [{ label: "Encoding Culture(s) Lab", href: "https://eclab.ischool.illinois.edu" }], wip: true },
+  { number: "02", title: "Sephora Skincare Review Analysis", category: "Data & Coding", tags: ["Topic Modeling", "Machine Learning", "Tableau"], desc: "Merged Kaggle's Sephora product and review datasets to explore why skincare reviews are so polarized. Applied topic modeling to surface recurring complaints such as breakouts, built a model predicting whether reviewers recommend a product, and designed a Tableau dashboard comparing ratings, recommendation rates, and complaint themes across brands, categories, and skin types.", year: "2026", links: [] },
+  { number: "03", title: "Loan Approval Prediction Model", category: "Data & Coding", tags: ["Python", "Machine Learning", "Streamlit"], desc: "Analyzed a large credit card dataset and built a machine learning model using Python (scikit-learn, Pandas) to predict loan approval outcomes, with an interactive Streamlit dashboard for exploring EDA and model outputs.", year: "2025", links: [{ label: "GitHub", href: "https://github.com/backjhello/LoanApproval" }, { label: "Live Demo", href: "https://loanapprovalgit-emrznk8e4p9x34cldjxm8b.streamlit.app" }] },
+  { number: "04", title: "Sentinel — Deepfake Detection", category: "Data & Coding", tags: ["AI", "Generative AI", "Python"], desc: "Team project researching and building tools to detect AI-generated deepfake content. Explores the intersection of generative AI, misinformation, and trust in digital media.", year: "2026", links: [{ label: "GitHub", href: "https://github.com/IS492-SP26/team-project-deepfakes" }] },
   { number: "05", title: "Estée Lauder AI Strategy — Mock Consulting", category: "Marketing & Design", tags: ["Consulting", "Customer Analysis", "AI Strategy"], desc: "Team consulting project advising Estée Lauder, as a hypothetical client, on AI implementation in the U.S. market, covering competitive analysis, AI technology assessment, and customer analysis. Owned the customer analysis, including segmentation, unmet needs, and personas.", year: "2026", links: [] },
   { number: "06", title: "Planet Runner — Brand Guidelines", category: "Marketing & Design", tags: ["Branding", "UI/UX", "Figma"], desc: "Conceptualized and designed a social running application set in a cosmic narrative. Developed full brand identity including logo system, mascot, color palette, typography, and app UI.", year: "2025", links: [{ label: "Brand Guidelines", href: "https://www.behance.net/gallery/245946469/Planet-Runner-Brand-Guidelines" }, { label: "Final Result", href: "https://www.behance.net/gallery/227328483/PLANET-RUNNER" }] },
   { number: "07", title: "Voir — Exhibition Discovery App", category: "Marketing & Design", tags: ["UI/UX", "Figma", "App Design"], desc: "Conceptualized and designed an app for discovering exhibitions and performances, with a built-in journaling feature. Prototyped in Figma and published via Figma Make.", year: "2025", links: [{ label: "Prototype", href: "https://www.figma.com/design/HBKhbjlQ0W0ruN5QYRqWN2/HW7---part-3?t=7i7DWaVovUKpLr8a-1" }, { label: "Live Site", href: "https://donor-apply-58102002.figma.site" }] },
   { number: "08", title: "KARD Museum Visit Poster", category: "Marketing & Design", tags: ["Poster Design", "Adobe Photoshop"], desc: "Designed a promotional poster for KARD's museum visit to the National Museum of Modern and Contemporary Art (MMCA).", year: "2025", links: [{ label: "Instagram", href: "https://www.instagram.com/p/DM6wHVOxdQF/" }] },
-  { number: "09", title: "The Dark Side of K-POP", category: "Media Works", tags: ["Documentary", "Video Editing"], desc: "Video project examining the hidden pressures and systemic issues within the K-pop industry. Selected as one of the best works in the course.", year: "2025", links: [{ label: "YouTube", href: "https://youtu.be/u9mIlRfh5Mo?si=d6cGA4LBgYib9n5R" }] },
+  { number: "09", title: "The Dark Side of K-POP", category: "Media Works", tags: ["Documentary", "Video Editing"], desc: "Video project examining the hidden pressures and systemic issues within the K-pop industry. Selected as the best work in the course and continues to be used as a model example in later classes.", year: "2025", links: [{ label: "YouTube", href: "https://youtu.be/u9mIlRfh5Mo?si=d6cGA4LBgYib9n5R" }] },
   { number: "10", title: "Paper to Video \u2014 Generative AI & Design Fixation", category: "Media Works", tags: ["Video Essay", "Generative AI"], desc: "Adapted an academic paper on the effects of generative AI on design fixation and divergent thinking into a video essay. Selected as one of the best works in the course.", year: "2026", links: [{ label: "YouTube", href: "https://youtu.be/WiMfOvQOLog?si=uoGy7Ic8i_82XbXO" }] },
 ];
 const categories = ["Data & Coding", "Marketing & Design", "Media Works"];
@@ -50,7 +48,6 @@ const categories = ["Data & Coding", "Marketing & Design", "Media Works"];
 const socialLinks = [
   { label: "LinkedIn",  href: "https://www.linkedin.com/in/seyeon-kim-911ab6347" },
   { label: "GitHub",    href: "https://github.com/sageskim" },
-  { label: "Instagram", href: "https://www.instagram.com/klmseyeon/" },
   { label: "YouTube",   href: "https://www.youtube.com/@seyeonsagekim" },
 ];
 
@@ -94,6 +91,11 @@ export default function Home() {
                   <p className="timeline-title">{item.title}</p>
                   <p className="timeline-place">{item.place}</p>
                   {item.desc && <p className="timeline-desc">{item.desc}</p>}
+                  {item.link && (
+                    <a href={item.link.href} target="_blank" rel="noopener noreferrer" className="award-link" style={{ marginTop: "0.75rem" }}>
+                      {item.link.label} <ArrowSvg />
+                    </a>
+                  )}
                 </div>
                 <span className="timeline-year">{item.year}</span>
               </div>
