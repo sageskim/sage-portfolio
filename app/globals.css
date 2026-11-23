@@ -496,9 +496,9 @@ ul { list-style: none; }
   .navbar-link { font-size: 0.8rem; }
 
   .home-page { padding: 4.5rem 1.25rem 2rem; }
-  .hero { grid-template-columns: 1fr auto; gap: 0 1rem; }
-  .hero-title { font-size: clamp(1.1rem, 4.8vw, 1.45rem); line-height: 1.4; padding-top: 1.5rem; }
-  .hero-image-inner { width: 180px; }
+  .hero { grid-template-columns: 1fr; grid-template-rows: auto auto; gap: 2.5rem 0; }
+  .hero-title { font-size: clamp(1.5rem, 6.4vw, 2.4rem); line-height: 1.32; padding-top: 1.5rem; }
+  .hero-image-inner { grid-column: 1; grid-row: 2; justify-self: end; width: min(74vw, 360px); }
 
   .about-page, .projects-page { padding: 4rem 1.5rem 4rem; }
   .timeline-item { grid-template-columns: 1fr; }
